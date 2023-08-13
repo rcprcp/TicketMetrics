@@ -4,14 +4,13 @@ This program requests tickets within the specified date range
 from Zendesk and creates a summary of the number of CLOSED and SOLVED
 tickets for each agent over the specified date range.
 
-### Developer notes 
-Then: 
-`git clone http://github.com/rcprcp/TicketMetrics.git`
-
-cd into the directory then:
-
-`mvn clean package`
-
+### Developer notes  
+``` shell
+git clone http://github.com/rcprcp/TicketMetrics.git
+cd TicketMetrics
+mvn clean package`
+java -jar target/TicketMetrics-1.0-SNAPSHOT-jar-with-dependencies.jar --start "2023-05-01" --end "2023-08-03"
+```
 To run this, you will need environment variable for the Zendesk URL, Zendesk email and token: 
 
 ```shell
