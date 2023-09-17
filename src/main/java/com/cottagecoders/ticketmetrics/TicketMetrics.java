@@ -4,6 +4,8 @@ import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import org.zendesk.client.v2.Zendesk;
 import org.zendesk.client.v2.model.Audit;
+import org.zendesk.client.v2.model.CustomFieldValue;
+import org.zendesk.client.v2.model.Organization;
 import org.zendesk.client.v2.model.Status;
 import org.zendesk.client.v2.model.Ticket;
 import org.zendesk.client.v2.model.events.Event;
@@ -151,6 +153,7 @@ public class TicketMetrics {
         return left.getName().toUpperCase().compareTo(right.getName().toUpperCase());
       }
     });
+    System.out.println("\n\nSort by name");
     printThem(itemList);
 
     // print by ticket count, ascending:
@@ -160,6 +163,7 @@ public class TicketMetrics {
         return left.getTicketCount().compareTo(right.getTicketCount());
       }
     });
+    System.out.println("\n\nSort by ticket count");
     printThem(itemList);
 
   }
